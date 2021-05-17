@@ -49,6 +49,9 @@ p{
 
 a,b,strong{
     color: #54B689;
+}
+
+a:default{
     text-decoration: underline;
 }
 

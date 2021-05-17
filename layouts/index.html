@@ -26,17 +26,17 @@
   {{ end }} -->
   
   <div class="content">
-    <h3 class="text-center ">
+    <h1 class="text-center ">
     Simple blog for programming and stuffs.
-    </h3>
+    </h1>
     <hr>
     <h2 class="section-title fw-bold my-3">Post Category</h2>
-    <div class="list-group" >
+    <div class="d-grid gap-2" >
         {{ range .Site.Sections.Reverse }}
-        <a href="{{ .Permalink }}">
-            <h5 class="bg-success text-center text-light p-2 my-1" >
-              {{ .Title }}
-            </h5>
+        <a href="{{ .Permalink }}" class="text-light" style="text-decoration: none;">
+          <button class="btn btn-primary" style="width: 100%;">
+            {{ .Title }}
+          </button>          
         </a>      
         {{ end }}
       </div>
@@ -45,7 +45,7 @@
         {{ range first 5 (where .Site.RegularPages.ByPublishDate.Reverse ".Section" "not in" "addons") }}        
           <div class="card text-center border-0 bg-transparent my-5">
             <h4 class="fw-bold">
-              <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+              <a href="{{ .Permalink }}" style="text-decoration: none;">{{ .Title | markdownify }}</a>
             </h4>
             <small class="text-secondary">
               {{ $customDateFormat := "January 2, 2006" }}

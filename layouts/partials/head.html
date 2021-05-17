@@ -9,41 +9,25 @@
   {{ end }}
 
   <!-- {{ $appleTouchIcon := "apple-touch-icon.png" }}
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ $appleTouchIcon | absURL }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ $appleTouchIcon | relURL }}">
 
   {{ $favicon32x32 := "favicon-32x32.png" }}
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ $favicon32x32 | absURL }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ $favicon32x32 | relURL }}">
 
   {{ $favicon16x16 := "favicon-16x16.png" }}
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ $favicon16x16 | absURL }}"> -->
-
-  {{ $siteWebmanifest := "site.webmanifest" }}
-  <link rel="manifest" href="{{ $siteWebmanifest | absURL }}">
-
-  {{ $safariPinnedTab := "safari-pinned-tab.svg" }}
-  <link rel="mask-icon" href="{{ $safariPinnedTab | absURL }}" color="{{ .Site.Params.faviconSafariPinnedTabColor }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ $favicon16x16 | relURL }}"> -->
 
   <meta name="msapplication-TileColor" content="{{ .Site.Params.faviconMsApplicationTileColor }}">
 
   <meta name="theme-color" content="{{ .Site.Params.faviconThemeColor }}">
   
-  {{ $bootstrapCss := "css/bootstrap.min.css" }}
-  <link rel="stylesheet" href="{{ $bootstrapCss | absURL }}" />
-  
-  {{ $switchCss := "css/bootstrap-switch-button.min.css" }}
-  <link rel="stylesheet" href="{{ $switchCss | absURL }}" />
+  <link rel="stylesheet" href={{ "/css/bootstrap.min.css" | relURL }} />  
+  <link rel="stylesheet" href={{ "/css/bootstrap-switch-button.min.css" | relURL }} />
+  <link rel="stylesheet" href={{ "/css/style.css" | relURL }} />
 
-  {{ $styleCss := "css/style.css" }}
-  <link rel="stylesheet" href="{{ $styleCss | absURL }}" />
-
-  {{ $bootstrapJs := "js/bootstrap.bundle.min.js" -}}
-  <script src="{{ $bootstrapJs | absURL }}"></script>
-  
-  {{ $switchJs := "js/bootstrap-switch-button.min.js" -}}
-  <script src="{{ $switchJs | absURL }}"></script>
-  
-  {{ $indexJs := "js/index.js" -}}
-  <script src="{{ $indexJs | absURL }}"></script>
+  <script src={{ "/js/bootstrap.bundle.min.js" | relURL }}></script>  
+  <script src={{ "/js/bootstrap-switch-button.min.js" | relURL }}></script>
+  <script src={{ "/js/index.js" | relURL }}></script>
 
   {{ if .IsHome }}
   {{ $homepage := "Home" }}
