@@ -1,0 +1,68 @@
+{{- define "main" -}}
+
+{{ $homepage := "Home" }}
+{{ with .Site.Menus.nav }}
+  {{ range first 1 . }}
+    {{ $homepage = .Name }}
+  {{ end }}
+{{ end }}
+
+  <!-- <h1 class="fw-bold">{{ $homepage }}</h1> -->
+  
+  <!-- {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ range $pages.ByPublishDate.Reverse }}
+    <p>
+      <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+      {{ $customDateFormat := "January 2, 2006" }}
+      {{ with .Site.Params.customDateFormat }}{{ $customDateFormat = . }}{{ end }}
+      <br>
+      <small class="text-secondary">{{ .PublishDate.Format $customDateFormat }}</small>
+      {{ partial "tags" . }}
+      {{ if eq .Site.Params.showPostSummary true }}
+      <br>
+      {{ .Summary }}
+      {{ end }}
+    </p>
+  {{ end }} -->
+  
+  <div class="content">
+    <h3 class="text-center ">
+    Simple blog for programming and stuffs.
+    </h3>
+    <hr>
+    <h2 class="section-title fw-bold my-3">Post Category</h2>
+    <div class="list-group" >
+        {{ range .Site.Sections.Reverse }}
+        <a href="{{ .Permalink }}">
+            <h5 class="bg-success text-center text-light p-2 my-1" >
+              {{ .Title }}
+            </h5>
+        </a>      
+        {{ end }}
+      </div>
+      <h2 class="section-title fw-bold mt-3">Recent Post</h2>
+      <section>
+        {{ range first 5 (where .Site.RegularPages.ByPublishDate.Reverse ".Section" "not in" "addons") }}        
+          <div class="card text-center border-0 bg-transparent my-5">
+            <h4 class="fw-bold">
+              <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            </h4>
+            <small class="text-secondary">
+              {{ $customDateFormat := "January 2, 2006" }}
+              {{ with .Site.Params.customDateFormat }}{{ $customDateFormat = . }}{{ end }}
+              {{ .PublishDate.Format $customDateFormat }}
+              -
+              {{ partial "time-to-read.html" . }}
+            </small>
+            <!-- {{ partial "tags" . }} -->
+            {{ if eq .Site.Params.showPostSummary true }}
+            <br>
+            {{ .Summary }}
+            {{ end }}
+          </div>
+        {{ end }}
+      </section>
+  </div>
+  
+
+{{- end -}}

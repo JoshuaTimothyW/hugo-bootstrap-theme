@@ -1,0 +1,28 @@
+{{- define "main" -}}
+
+<div class="content">
+  <h1 class="text-center">{{ .Title }}</h1>
+  <hr>
+  {{ $pages := .Pages }}
+  {{ range $pages.ByPublishDate }}
+    <div class="card border-0 bg-transparent my-5">
+      <h4 class="fw-bold">
+        <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+      </h4>
+      <small class="text-secondary">
+        {{ $customDateFormat := "January 2, 2006" }}
+        {{ with .Site.Params.customDateFormat }}{{ $customDateFormat = . }}{{ end }}
+        {{ .PublishDate.Format $customDateFormat }}
+        -
+        {{ partial "time-to-read.html" . }}
+      </small>
+      <!-- {{ partial "tags" . }} -->
+      {{ if eq .Site.Params.showPostSummary true }}
+      <br>
+      {{ .Summary }}
+      {{ end }}
+    </div>
+  {{ end }}
+</div>
+
+{{- end -}}

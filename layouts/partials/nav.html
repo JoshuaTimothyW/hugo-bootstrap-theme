@@ -1,0 +1,26 @@
+<nav class="sidenav navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="background-image: url('https://mdbootstrap.com/img/svg/hamburger4.svg?color=fff');"></span>
+    </button>
+    <a class="logo text-light" href="/">
+      {{ .Site.Title }}
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="d-flex flex-column p-3 nav nav-pills">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+            About
+          </a>
+        </li> -->
+        <li class="nav-item">
+          <hr class="mb-4">
+          <div class="d-flex justify-content-center">
+            <input id="switch-mode" onchange="darkMode()" type="checkbox" data-toggle="switchbutton" data-width="100" data-onstyle="success" data-offstyle="dark" data-style="border" data-onlabel="Light Mode" data-offlabel="Dark Mode">
+          </div>
+        </li>        
+      </ul>
+    </div>
+  </div>
+</nav>
