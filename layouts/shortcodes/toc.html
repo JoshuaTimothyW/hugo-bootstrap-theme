@@ -1,14 +1,8 @@
-<div class="accordion accordion-flush my-3 border-0">
-    <div class="accordion-item">
-        <div class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Daftar Isi
-            </button>
-        </div>
-    </div>
-    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-        <div class="accordion-body toc">
-            {{ .Page.TableOfContents }}
-        </div>
+<button style="width: 100%;" class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Daftar Isi
+</button>
+<div class="collapse" id="collapseExample">
+    <div class="card card-body toc bg-transparent">
+        {{ .Page.TableOfContents }}    
     </div>
 </div>
