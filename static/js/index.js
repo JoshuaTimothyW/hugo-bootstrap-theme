@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     let mode = localStorage.getItem("dark-mode");
     console.log("web started");
-    if(mode === "dark"){
-        console.log(document.getElementById("switch-mode").value);
-        document.getElementById("switch-mode").checked = true;
-        document.body.classList.toggle("dark-mode");
-    }
+    // if(mode === "dark"){
+    //     console.log(document.getElementById("switch-mode").value);
+    //     document.getElementById("switch-mode").checked = true;
+    //     document.body.classList.toggle("dark-mode");
+    // }
 
 });
 

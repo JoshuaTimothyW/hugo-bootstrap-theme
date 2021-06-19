@@ -5,7 +5,7 @@
   {{ hugo.Generator }}
 
   {{ with .Site.Params.description }}
-  <meta name="description" content="{{ . }}">
+    <meta name="description" content="{{ . }}">
   {{ end }}
 
   <!-- {{ $appleTouchIcon := "apple-touch-icon.png" }}
@@ -22,11 +22,13 @@
   <meta name="theme-color" content="{{ .Site.Params.faviconThemeColor }}">
   
   <link rel="stylesheet" href={{ "/css/bootstrap.min.css" | relURL }} />  
-  <link rel="stylesheet" href={{ "/css/bootstrap-switch-button.min.css" | relURL }} />
+  
+  <!-- <link rel="stylesheet" href={{ "/css/bootstrap-switch-button.min.css" | relURL }} />
+  <script src={{ "/js/bootstrap-switch-button.min.js" | relURL }}></script> -->
+  
   <link rel="stylesheet" href={{ "/css/style.css" | relURL }} />
 
   <script src={{ "/js/bootstrap.bundle.min.js" | relURL }}></script>  
-  <script src={{ "/js/bootstrap-switch-button.min.js" | relURL }}></script>
   <script src={{ "/js/index.js" | relURL }}></script>
 
   {{ if .IsHome }}

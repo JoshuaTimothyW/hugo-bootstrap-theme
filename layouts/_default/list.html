@@ -1,8 +1,12 @@
 {{- define "main" -}}
 
-<div class="content">
-  <h1 class="text-center">{{ .Title }}</h1>
-  <hr>
+<div class="p-5 text-center post-title-bg">
+    <strong class="h1 text-primary">
+        {{ .Title  }}
+    </strong>
+</div>
+<div class="content container">
+
   {{ $pages := .Pages }}
   {{ range $pages.ByPublishDate }}
     <div class="card border-0 bg-transparent my-5">
