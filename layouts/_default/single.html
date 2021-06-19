@@ -1,6 +1,6 @@
 {{- define "main" -}}
 
-<div class="p-5 text-primary post-title-bg">
+<div class="p-5 text-blue post-title-bg">
     <h1 class="fw-bold">{{ .Title | markdownify }}</h1>
     {{ if or .Params.showDate .Site.Params.showDate }}
         <span class="text-muted">{{- .Date.Format "Jan 2, 2006" }} - {{ partial "time-to-read.html" . }}</span>

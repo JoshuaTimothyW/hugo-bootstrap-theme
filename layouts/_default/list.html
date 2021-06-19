@@ -1,7 +1,7 @@
 {{- define "main" -}}
 
 <div class="p-5 text-center post-title-bg">
-    <strong class="h1 text-primary">
+    <strong class="h1 text-blue">
         {{ .Title  }}
     </strong>
 </div>
@@ -9,9 +9,9 @@
 
   {{ $pages := .Pages }}
   {{ range $pages.ByPublishDate }}
-    <div class="card border-0 bg-transparent my-5">
+    <div class="my-5">
       <h4 class="fw-bold">
-        <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+        <a style="text-decoration: none;" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
       </h4>
       <small class="text-secondary">
         {{ $customDateFormat := "January 2, 2006" }}

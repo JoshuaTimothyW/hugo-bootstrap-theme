@@ -104,6 +104,16 @@ a:hover{
     display: block;
 }
 
+.nav-tabs {
+    overflow-x: auto;
+    overflow-y:hidden;
+    flex-wrap: nowrap;
+}
+
+.nav-tabs .nav-link {
+    white-space: nowrap;
+}
+
 .section-title:before
 ,h3::before
 ,h2::before{
