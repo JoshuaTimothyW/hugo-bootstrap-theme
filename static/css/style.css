@@ -34,13 +34,14 @@ body{
     background-color: rgb(170, 243, 239)
 }
 
-img::before{
-    width: 100%;    
+img{
+    max-width: 100%;
+    height: auto;    
 }
 
 p{
     /* font-family: "Fira Code", monospace; */
-    font-family: "Literata", monospace;
+    /* font-family: "Literata", monospace; */
     color: #3f3f46;
     padding: 0 0.5rem;
 }
@@ -146,11 +147,11 @@ a:hover{
 
 /* Large Screen */
 @media only screen and (min-width: 800px) {
-    .wrapper{
+    /* .wrapper{
         align-items: stretch;
         display: flex;
         width: 100%;
-    }
+    } */
 
     .sidenav{
         height: 100vh;
