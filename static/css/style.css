@@ -34,7 +34,7 @@ body{
     background-color: rgb(170, 243, 239)
 }
 
-img{
+img::before{
     max-width: 100%;
     height: auto;    
 }
