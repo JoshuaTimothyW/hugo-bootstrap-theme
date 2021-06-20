@@ -29,7 +29,11 @@
   <link rel="stylesheet" href={{ "/css/style.css" | relURL }} />
 
   <script src={{ "/js/bootstrap.bundle.min.js" | relURL }}></script>  
-  <script src={{ "/js/index.js" | relURL }}></script>
+  <!-- <script src={{ "/js/index.js" | relURL }}></script> -->
+
+  <!-- PWA Assets -->
+  <link rel="manifest" href={{ "manifest.json" | relURL }}>
+  <script src={{ "sw.js" | relURL }}></script>
 
   {{ if .IsHome }}
   {{ $homepage := "Home" }}
