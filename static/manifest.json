@@ -1,5 +1,5 @@
 {
-  "name": "Simplify",
+  "name": "",
   "short_name": "Simplify",
   "icons": [
     {
@@ -135,5 +135,5 @@
   "display": "fullscreen",
   "orientation" : "portrait",
   "background_color": "#212529",
-  "theme_color": "#212529"
+  "theme_color": "#0d6efd"
 }
