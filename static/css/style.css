@@ -34,21 +34,21 @@ body{
     background-color: rgb(170, 243, 239)
 }
 
-img::before{
+img{
     max-width: 100%;
-    height: auto;    
+    height: auto;        
 }
 
 p{
-    /* font-family: "Fira Code", monospace; */
+    font-family: "Fira Code", monospace;
     /* font-family: "Literata", monospace; */
     color: #3f3f46;
     padding: 0 0.5rem;
 }
 
-/* a,b,strong{
-    color: #54B689;
-} */
+a,b,strong{
+    color: rgb(30, 135, 240);
+}
 
 a:default{
     text-decoration: underline;
@@ -152,6 +152,7 @@ a:hover{
         display: flex;
         width: 100%;
     } */
+
 
     .sidenav{
         height: 100vh;
