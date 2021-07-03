@@ -67,26 +67,24 @@ td {
     padding: 0.6rem;
 }
 
-pre code{
-    border-radius: 10px;
+pre {
+    padding-left: calc(24px * -1);
+    padding-right: calc(24px * -1);
+    margin-bottom: 32px;
+    background: #2e2e33 !important;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+pre code {
     display: block;
-    padding: 10px;
-    margin-top: 10px;
-    /* color: rgba(255, 255, 255, 0.8); */
+    margin-left: 0;
+    margin-right: 0;
+    padding: 24px;
+    color: rgba(255, 255, 255, 0.8);
+    background: transparent;
+    border-radius: 0;
 }
-
-code{
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 10px;
-    color:  rgb(30, 135, 240)
-    /* color:#f8f8f2;
-    background-color:#272822;
-    -moz-tab-size:4;
-    -o-tab-size:4;
-    tab-size:4 */
-}
-
 
 a:hover{
     color: rgb(30, 191, 240);
